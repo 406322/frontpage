@@ -2,7 +2,7 @@ import config from '../config/config.js';
 
 const servicesHost = config.get('servicesHostname');
 
-const basepath = 'http://localhost:8080/frontpage-case'; // Kan dette hentes fra config isteden?
+const basepath = config.get('basePath');
 
 export default function renderPreview({ publication }) {
   return `
