@@ -20,9 +20,12 @@ router.get(
 );
 
 router.get('/component', (req, res) => {
+  const publication = req.query.publication
+  console.log(publication)
   logger.info('Request /component route');
   res.type('text/html');
-  res.end();
+  res.end(`<amedia-frontpage param-publication="${publication}"></amedia-frontpage>`);
+  // res.end(`<amedia-frontpage param-publication="${publication}" id="teasers"></amedia-frontpage>`);
 });
 
 
